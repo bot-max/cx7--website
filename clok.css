@@ -1,0 +1,79 @@
+/* font implementations*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Css Reset*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: "Poppins", sans-serif;
+}
+#box{
+    display:flex;
+    gap:1.5rem;
+    background-color:#2c2f41;
+    padding:2rem;
+    border:5px solid #33384f;
+    color:white;
+    box-shadow: 0 5px 30px #5c4e2b;
+    border-radius:1rem;
+    animation: samp 10s infinite;
+}
+@keyframes samp {
+0%{box-shadow:0 0px 40px #f99393;}
+25%{box-shadow:0 0px 40px#8ee2a4;}
+50%{box-shadow:0 0px 40px#d29e82;}
+75%{box-shadow:0 0px 40px#8da4da;}
+100%{box-shadow:0 0px 40px rgb(48, 144, 217)}
+}
+p{
+    font-size:5rem;
+    font-weight:600;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color:#2e2e44;
+}
+#dots{
+    color:#5f6389;
+}
+#displayhour{
+    background:-webkit-linear-gradient(90deg,#081fec,#6d94f0);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
+#displayminute{
+    background:-webkit-linear-gradient(90deg,#d2b898,#e86017);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
+#displaysecond{
+    font-size:1.2rem;
+    transform:translateY(4rem);
+    background:-webkit-linear-gradient(90deg,#08ec45,#99f397);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
+@media (max-width:450px) {
+    p{
+        font-size:3rem;
+    }
+    #displaysecond{
+        font-size:0.9rem;
+        transform:translateY(2.2rem);
+    }
+}
+@media (max-width:360px) {
+    #box{
+        gap:0.6rem;
+    }
+}
+@media (max-width:300px) {
+    #box{
+        gap:0.3rem;
+        padding:1.2rem;
+    }
+}
